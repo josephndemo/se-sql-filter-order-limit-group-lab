@@ -10,7 +10,7 @@ conn1 = sqlite3.connect('planets.db')
 df_no_moons = pd.read_sql("""
 SELECT *
 FROM planets
-WHERE moonsrings = 0
+WHERE rings = 0
 ORDER BY name;
 """, conn1)
 
