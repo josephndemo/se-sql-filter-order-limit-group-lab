@@ -16,11 +16,11 @@ ORDER BY name;
 
 
 # STEP 2
-df_name_seven = pd.read_sql("""
+df_mass = pd.read_sql("""
 SELECT name, mass
 FROM planets
-WHERE LENGTH(name) = 7
-ORDER BY name;
+WHERE mass <= 1.00
+ORDER BY mass ASC;
 """, conn1)
 
 
