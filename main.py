@@ -96,7 +96,7 @@ FROM babe_ruth_stats;
 
 # STEP 10
 df_hr_total = pd.read_sql("""
-SELECT SUM(home_runs)
+SELECT SUM(hr)
 FROM babe_ruth_stats;
 """, conn3)
 
