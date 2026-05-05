@@ -10,7 +10,8 @@ conn1 = sqlite3.connect('planets.db')
 df_no_moons = pd.read_sql("""
 SELECT *
 FROM planets
-WHERE rings = 0;
+WHERE rings = 0
+ORDER BY name;
 """, conn1)
 
 # STEP 2
@@ -29,7 +30,7 @@ df_mass = pd.read_sql("""
 SELECT name, mass
 FROM planets
 WHERE mass <= 1.00
-ORDER BY mass;
+ORDER BY name;
 """, conn1)
 
 # STEP 4
