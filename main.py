@@ -7,20 +7,13 @@ import sqlite3
 conn1 = sqlite3.connect('planets.db')
 
 # STEP 1
-# df_no_moons = pd.read_sql("""
-# SELECT *
-# FROM planets
-# WHERE rings = 0
-# ORDER BY name;
-# """, conn1)
-
 df_no_moons = pd.read_sql("""
 SELECT *
 FROM planets
 WHERE rings = 0
-AND moons = 0
 ORDER BY name;
 """, conn1)
+
 
 # STEP 2
 df_name_seven = pd.read_sql("""
